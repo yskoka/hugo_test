@@ -13,7 +13,7 @@
       <link>https://example.org/posts/my-first-post/</link>
       <pubDate>Mon, 10 Mar 2025 00:05:39 +0900</pubDate>
       <guid>https://example.org/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;&#xA;&lt;h2 id=&#34;説明&#34;&gt;説明&lt;/h2&gt;&#xA;&lt;p&gt;日本語で説明をします&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;&#xA;&lt;h2 id=&#34;説明&#34;&gt;説明&lt;/h2&gt;&#xA;&lt;p&gt;日本語で説明をします。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
