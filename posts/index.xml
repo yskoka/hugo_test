@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>https://yskoka.github.io/hugo_test/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Mar 2025 00:05:39 +0900</lastBuildDate>
+    <atom:link href="https://yskoka.github.io/hugo_test/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://yskoka.github.io/hugo_test/posts/my-first-post/</link>
+      <pubDate>Mon, 10 Mar 2025 00:05:39 +0900</pubDate>
+      <guid>https://yskoka.github.io/hugo_test/posts/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;&#xA;&lt;h2 id=&#34;説明&#34;&gt;説明&lt;/h2&gt;&#xA;&lt;p&gt;日本語で説明をします。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
