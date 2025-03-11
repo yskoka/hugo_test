@@ -12,4 +12,4 @@ Visit the [Hugo](https://gohugo.io) website!
 
 ## 説明
 
-日本語で説明をします。。
+日本語で説明をします。
