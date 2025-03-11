@@ -6,8 +6,15 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Mar 2025 00:05:39 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 11 Mar 2025 18:45:52 +0900</lastBuildDate>
     <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second Post</title>
+      <link>https://example.org/posts/second-post/</link>
+      <pubDate>Tue, 11 Mar 2025 18:45:52 +0900</pubDate>
+      <guid>https://example.org/posts/second-post/</guid>
+      <description>&lt;h2 id=&#34;2回目のポスト&#34;&gt;2回目のポスト&lt;/h2&gt;&#xA;&lt;p&gt;2回目のポストです。&#xA;&lt;strong&gt;反映されていますでしょうか。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
       <link>https://example.org/posts/my-first-post/</link>
