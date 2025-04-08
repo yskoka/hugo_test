@@ -35,7 +35,7 @@ jobs:
         # Dockerfileを元にbuild
       - name: Build the docker image
         id: build-docker-image
-        run: docker build . --file Dockerfile --tag https://us-chicago-1.ocir.io/orasejapan/hugoapp:${{ github.sha }}
+        run: docker build . --file Dockerfile --tag us-chicago-1.ocir.io/orasejapan/hugoapp:${{ github.sha }}
 
         # OCI コンテナレジストリにlogin
       - name: Log into OCIR
