@@ -1,0 +1,54 @@
+name: Build_Push_Deploy
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      OCI_CLI_USER: ${{ secrets.OCI_CLI_USER }}
+      OCI_CLI_TENANCY: ${{ secrets.OCI_CLI_TENANCY }}
+      OCI_CLI_FINGERPRINT: ${{ secrets.OCI_CLI_FINGERPRINT }}
+      OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
+      OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
+
+    steps:
+        # ソースコードをclone
+      - uses: actions/checkout@v3
+
+        # Dockerfileを元にbuild
+      - name: Build the docker image
+        id: build-docker-image
+        run: docker build . --file Dockerfile --tag ord-ocir.io/orasejapan/hugoapp:${{ github.sha }}
+
+        # OCI コンテナレジストリにlogin
+      - name: Log into OCIR
+        uses: oracle-actions/login-ocir@v1.2.1
+        id: login-into-ocir
+        with:
+          auth_token: ${{ secrets.OCI_AUTH_TOKEN }}
+
+        # コンテナをOCI コンテナレジストリにpush
+      - name: Push a container image
+        id: push-container-image
+        run: docker push syd.ocir.io/orasejapan/hugoapp:${{ github.sha }}
+
+        # OCI OKEの構成
+      - name: Kubectl cluter
+        uses: oracle-actions/configure-kubectl-oke@v1.3.2
+        id: kubectl-cluster
+        with:
+          cluster: ${{ secrets.OKE_CLUSTER_OCID }}
+
+        # コンテナイメージタグをCommit SHAに書き換えてdeployment.yamlをapply
+      - name: Kubectl apply
+        id: kubectl-apply
+        run: |
+          sed -i 's/0000000000/${{ github.sha }}/g' deployment.yaml
+          kubectl apply -f deployment.yaml
