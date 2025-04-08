@@ -1,6 +1,6 @@
 FROM klakegg/hugo:ext-alpine
 
-RUN hugo
+RUN hugo -d
 
 WORKDIR /src
 
