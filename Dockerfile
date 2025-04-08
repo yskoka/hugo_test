@@ -2,7 +2,7 @@ FROM klakegg/hugo:ext-alpine
 
 RUN hugo -D
 
-WORKDIR /src
+WORKDIR /public
 
 EXPOSE 1313
 
