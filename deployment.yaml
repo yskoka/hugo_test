@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hugo
-        image: ord.ocir.io/orasejapan/yusrepo/hugoapp:0000000000  #コンテナ・レジストリのイメージへの完全修飾パス
+        image: ord.ocir.io/orasejapan/yusrepo:0000000000  #コンテナ・レジストリのイメージへの完全修飾パス
         imagePullPolicy: Always
         ports:
         - containerPort: 1313  # nginx confファイルで設定したnginxのlisten port
