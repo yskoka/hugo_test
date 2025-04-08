@@ -1,6 +1,5 @@
 FROM klakegg/hugo:ext-alpine
 
-RUN hugo -D
 
 
 
