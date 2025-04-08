@@ -47,7 +47,7 @@ jobs:
         # コンテナをOCI コンテナレジストリにpush
       - name: Push a container image
         id: push-container-image
-        run: docker push syd.ocir.io/orasejapan/hugoapp:${{ github.sha }}
+        run: docker push ord.ocir.io/orasejapan/hugoapp:${{ github.sha }}
 
         # OCI OKEの構成
       - name: Kubectl cluter
