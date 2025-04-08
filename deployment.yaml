@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hugo-deployment     # app名は任意
+  labels:
+    app: hugo
+spec:
+  replicas: 1   # テストなのでreplicaは1つ
+  selector:
+    matchLabels:
+      app: hugo
+  template:
+    metadata:
+      labels:
+        app: hugo
+    spec:
+      containers:
+      - name: hugo
+        image: ord.ocir.io/orasejapan/yusrepo/hugoapp:0000000000  #コンテナ・レジストリのイメージへの完全修飾パス
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 1313  # nginx confファイルで設定したnginxのlisten port
+          protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hugo-svc
+spec:
+  selector:
+    app: hugo
+  ports:
+    - port: 1313         # ServiceのExpose port
+      targetPort: 1313   # nginx confファイルで設定したnginxのlisten port
+      nodePort: 1313    # nodeで公開するport
+      protocol: TCP
+  type: NodePort
