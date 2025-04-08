@@ -35,7 +35,7 @@ jobs:
         # Dockerfileを元にbuild
       - name: Build the docker image
         id: build-docker-image
-        run: docker build . --file Dockerfile --tag us-chicago-1.ocir.io/orasejapan/hugoapp:${{ github.sha }}
+        run: docker build . --file Dockerfile --tag ord.ocir.io/orasejapan/hugoapp:${{ github.sha }}
 
         # OCI コンテナレジストリにlogin
       - name: Log into OCIR
@@ -47,7 +47,7 @@ jobs:
         # コンテナをOCI コンテナレジストリにpush
       - name: Push a container image
         id: push-container-image
-        run: docker push us-chicago-1.ocir.io/orasejapan/hugoapp:${{ github.sha }}
+        run: docker push ord.ocir.io/orasejapan/hugoapp:${{ github.sha }}
 
         # OCI OKEの構成
       - name: Kubectl cluter
