@@ -33,6 +33,6 @@ spec:
   ports:
     - port: 1313         # ServiceのExpose port
       targetPort: 1313   # nginx confファイルで設定したnginxのlisten port
-      nodePort: 1313    # nodeで公開するport
+      nodePort: 31313    # nodeで公開するport
       protocol: TCP
   type: NodePort
